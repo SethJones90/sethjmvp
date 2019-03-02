@@ -221,8 +221,17 @@ h3 {
   top: 44%;
 }
 
+.services-text-1 {
+  width: 10px;
+  margin: 1px;
+  display: inline-block;
+  vertical-align: middle;
+  color: red;
+  font-family: 'Unica One', cursive;
+}
 
-.services-text {
+
+.services-text-2 {
   width: 20px;
   margin: 4px;
   display: inline-block;
