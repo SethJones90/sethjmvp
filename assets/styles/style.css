@@ -1,0 +1,276 @@
+
+body {
+  background-image:url("../img/4.jpg"), linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+
+.text {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-family: 'Unica One', cursive;
+/*  font-family: 'Open Sans', sans-serif;*/
+  font-weight: 600;
+  color: white;
+  font-size: 100px;
+  line-height: 100px;
+  margin: 10px;
+}
+
+h3 {
+  margin: 10px;
+  line-height: 50px;
+/*  font-family: 'Jura', sans-serif;*/
+  font-family: 'Unica One', cursive;
+  font-weight: 400;
+  color: white;
+  font-size: 35px;
+}
+
+.red {
+/*  color: red;*/
+/*  color: #a51212;*/
+  color: #ca1a1a;
+}
+
+.tagline-container {
+/*  border: 1px solid blue;*/
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  margin: auto;
+  top: 0;
+/*  right: 0;*/
+  bottom: 0;
+/*  left: 0;*/
+  float: left;
+  width: 700px;
+  height: 400px;
+}
+
+.container-content {
+/*  border: 1px solid red;*/
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 700px;
+  height: 400px;
+}
+
+.hero-button {  
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  height: 45px;
+  width: 140px;
+/*  font-family: 'Open Sans', sans-serif;*/
+  font-family: 'Unica One', cursive;
+  font-size: 18px;
+  display: inline-block;
+  background: rgba(0,0,0,0.0);
+  margin: 5px;
+/*  text-transform: lowercase;*/
+  letter-spacing: 1px;
+}
+
+.hero-button:hover {  
+  border: 1px solid white;
+  border-radius: 5px;
+  color: black;
+  height: 45px;
+  width: 140px;
+/*  font-family: 'Open Sans', sans-serif;*/
+  font-family: 'Unica One', cursive;
+  font-size: 18px;
+  display: inline-block;
+  background: white;
+  margin: 5px;
+/*  text-transform: lowercase;*/
+  letter-spacing: 1px;
+}
+
+
+.skills-container {
+
+/*  border: 1px solid red;*/
+  float: right;
+  right: 60px;
+  overflow: auto;
+  height: 100%;
+  width: 100px;
+  top: 50%;
+  bottom: 50%;
+  
+  /* FLEX STUFF */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+.item-container{
+/*  border: 1px solid blue;*/
+}
+
+.item-text {
+  text-align: center;
+  color: white;
+  font-family: 'Unica One', cursive;
+}
+
+.svg-circle {
+  display: block; 
+  margin: 10px;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  margin-left: 35px;
+}
+
+#tech {
+  text-align: center;
+}
+
+.tech-icon {
+  width: 40px;
+  margin: 4px;
+  display: inline-block;
+  vertical-align: middle;
+  
+  animation-name: pulse_animation;
+  animation-duration: 4s;
+  transform-origin:70% 70%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+
+@keyframes pulse_animation {
+    0% { transform: scale(1); }
+    30% { transform: scale(1); }
+    40% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+    60% { transform: scale(1); }
+    70% { transform: scale(1.08); }
+    80% { transform: scale(1); }
+    100% { transform: scale(1); }
+}
+
+
+
+.svg-circle:hover { 
+  transform: scale(1.2); 
+}
+
+.not-visible {
+  display: none;
+}
+
+.tech-visible {
+  float: right;
+  padding-bottom:15px;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  vertical-align:middle;
+  border-radius: 5px;
+  position: absolute;
+  right: 100px;
+  top: 25%;
+}
+
+.heading {
+  color: white;
+  font-family: 'Unica One', cursive;
+/*  letter-spacing: 1px;*/
+}
+
+
+#services {
+  text-align: center;
+}
+
+
+.services-visible {
+  float: right;
+  padding-bottom:15px;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  vertical-align:middle;
+  border-radius: 5px;
+  position: absolute;
+  right: 100px;
+  top: 44%;
+}
+
+
+.services-text {
+  width: 20px;
+  margin: 4px;
+  display: inline-block;
+  vertical-align: middle;
+  color: white;
+  font-family: 'Unica One', cursive;
+}
+
+.red {
+  color: red;
+}
+
+
+
+#about {
+  text-align: center;
+}
+
+
+.about-text-1 {
+  width: 35px;
+  margin: 4px;
+  display: inline-block;
+  vertical-align: middle;
+  color: white;
+  font-family: 'Unica One', cursive;
+}
+
+.about-text-2 {
+  width: 20px;
+  margin: 4px;
+  display: inline-block;
+  vertical-align: middle;
+  color: red;
+  font-family: 'Unica One', cursive;
+}
+
+
+
+.about-visible {
+  float: right;
+  padding-bottom:15px;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  vertical-align:middle;
+  border-radius: 5px;
+  position: absolute;
+  right: 100px;
+  top: 60%;
+}
