@@ -27,7 +27,14 @@ body {
 }
 
 .page {
-  color: black;
+  height:100%;
+  width: 100%;
+  color: white;
+  background-color: black;
+  font-family: 'Unica One', cursive;
+  font-weight: 600;
+  min-height: 100%;
+  position: absolute;
 }
 
 .text {
@@ -328,4 +335,9 @@ h3.landing-h3 {
   position: absolute;
   right: 100px;
   top: 60%;
+}
+
+.getInTouchInput {
+  display: block;
+  margin:10px;
 }
