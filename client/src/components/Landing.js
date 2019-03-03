@@ -69,81 +69,93 @@ class Landing extends Component {
   render() {
     return (
     <div>
-      <div className="skills-container">
-        <div className="item-container">
-          <p className="item-text">TECH</p>
-          <svg className="svg-circle" width="30" height="30">
-            <circle id="circle1" ref="circle1" cx="15" cy="15" r="15" fill="white" onClick={this.showTech}/>
-          </svg>
+      <div className="flex-container">
+        <div className="skills-container">
+          <div className="item-container">
+            <p className="item-text">TECH</p>
+            {/* <svg className="svg-circle" width="30" height="30">
+              <circle id="circle1" ref="circle1" cx="15" cy="15" r="15" fill="white" onClick={this.showTech}/>
+            </svg>
+          */}
+
+
+
+            <svg className="svg-circle" width="30" height="30" viewBox="0 0 40 40">
+              <circle cx="20" cy="20" fill="none" r="20" stroke="red" strokeWidth="2">
+                <animate attributeName="r" from="15" to="30" dur="1.5s" begin="0s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" from="1" to="0" dur="1.5s" begin="0s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="20" cy="20" fill="red" r="16" id="circle1" ref="circle1" onClick={this.showTech}/>
+            </svg>
+
+
+          </div>
+          <div className="item-container">   
+            <p className="item-text">SERVICES</p>
+            <svg className="svg-circle" width="30" height="30">
+              <circle id="circle2" ref="circle2" cx="15" cy="15" r="15" fill="white" onClick={this.showServices}/>
+            </svg>
+          </div>
+          <div className="item-container">  
+            <p className="item-text">ABOUT</p>
+            <svg className="svg-circle" width="30" height="30">
+              <circle id="circle3" ref="circle3" cx="15" cy="15" r="15" fill="white" onClick={this.showAbout}/>
+            </svg>
+          </div>
         </div>
-        <div className="item-container">   
-          <p className="item-text">SERVICES</p>
-          <svg className="svg-circle" width="30" height="30">
-            <circle id="circle2" ref="circle2" cx="15" cy="15" r="15" fill="white" onClick={this.showServices}/>
-          </svg>
+        
+        <div id="tech" ref="tech" className="not-visible">
+          <p className="heading">WEAPONS AT YOUR DISPOSAL</p>
+          <div className="tech-item">
+            <img className="tech-icon" src={rails}/>
+          </div> 
+          <div className="tech-item">
+            <img className="tech-icon" src={vue} />
+          </div>
+          <div className="tech-item">
+            <img className="tech-icon" src={node} /> 
+          </div>
+          <div className="tech-item">
+            <img className="tech-icon" src={react} />
+          </div>
+          <div className="tech-item">
+            <img className="tech-icon" src={html} />
+          </div>
+          <div className="tech-item">
+          <img className="tech-icon" src={js} />
+          </div>
+          <div className="tech-item">
+            <img className="tech-icon" src={css} /> 
+          </div>
         </div>
-        <div className="item-container">  
-          <p className="item-text">ABOUT</p>
-          <svg className="svg-circle" width="30" height="30">
-            <circle id="circle3" ref="circle3" cx="15" cy="15" r="15" fill="white" onClick={this.showAbout}/>
-          </svg>
+        
+        <div id="services" ref="services" className="not-visible">
+          <p className="heading">WHAT I CAN DO FOR YOU</p>
+          <p className="services-text-1">MVP:</p>
+          <p className="services-text-2"></p>
+          <p className="services-text-2">DEV</p>
+          <p className="services-text-2">/</p>
+          <p className="services-text-2">UX</p>
+          <p className="services-text-2">/</p>
+          <p className="services-text-2">UI</p>
         </div>
-      </div>
-      
-      <div id="tech" ref="tech" className="not-visible">
-        <p className="heading">WEAPONS AT YOUR DISPOSAL</p>
-        <div className="tech-item">
-          <img className="tech-icon" src={rails}/>
-        </div> 
-        <div className="tech-item">
-          <img className="tech-icon" src={vue} />
+        
+        <div id="about" ref="about" className="not-visible">
+          <p className="heading">THE JOURNEY</p>
+          <p className="about-text-1">MUSIC</p>
+          <p className="about-text-2">=></p>
+          <p className="about-text-1">BIZ</p>
+          <p className="about-text-2">=></p>
+          <p className="about-text-1">DEV</p>
+          <p className="about-text-2">=></p>
+          <p className="about-text-1">UX</p>
         </div>
-        <div className="tech-item">
-          <img className="tech-icon" src={node} /> 
-        </div>
-        <div className="tech-item">
-          <img className="tech-icon" src={react} />
-        </div>
-        <div className="tech-item">
-          <img className="tech-icon" src={html} />
-        </div>
-        <div className="tech-item">
-        <img className="tech-icon" src={js} />
-        </div>
-        <div className="tech-item">
-          <img className="tech-icon" src={css} /> 
-        </div>
-      </div>
-      
-      <div id="services" ref="services" className="not-visible">
-        <p className="heading">WHAT I CAN DO FOR YOU</p>
-        <p className="services-text-1">MVP:</p>
-        <p className="services-text-2"></p>
-        <p className="services-text-2">DEV</p>
-        <p className="services-text-2">/</p>
-        <p className="services-text-2">UX</p>
-        <p className="services-text-2">/</p>
-        <p className="services-text-2">UI</p>
-      </div>
-      
-      <div id="about" ref="about" className="not-visible">
-        <p className="heading">THE JOURNEY</p>
-        <p className="about-text-1">MUSIC</p>
-        <p className="about-text-2">=></p>
-        <p className="about-text-1">BIZ</p>
-        <p className="about-text-2">=></p>
-        <p className="about-text-1">DEV</p>
-        <p className="about-text-2">=></p>
-        <p className="about-text-1">UX</p>
-      </div>
-      
-    
-      
-      <div className="tagline-container">
-        <div className="container-content">
-          <h1>SETH JONES</h1>
-          <h3>LET'S BUILD <span className="red">YOUR MVP.</span></h3>
-              <button className="hero-button">WHY ME?</button><button className="hero-button">GET IN TOUCH</button>
+        <div className="tagline-container">
+          <div className="container-content">
+            <h1>SETH JONES</h1>
+            <h3>LET'S BUILD <span className="red">YOUR MVP.</span></h3>
+            <button className="hero-button">WHY ME?</button><button className="hero-button">GET IN TOUCH</button>
+          </div>
         </div>
       </div>
     </div>
