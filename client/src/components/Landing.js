@@ -15,18 +15,26 @@ import WhyMe from './WhyMe';
 class Landing extends Component {
 
   showTech = () => {
-    console.log("CLICKED")
     let accordion = this.refs.tech;
     let svg = this.refs.circle1;
-    console.log(accordion);
+    let pulse = this.refs.pulse1;
     
     if (accordion.classList.contains("tech-visible")) {
       svg.removeAttribute('fill',"red");
       svg.setAttribute('fill',"white");
+
+      pulse.removeAttribute('stroke',"red");
+      pulse.setAttribute('stroke',"white");
+      pulse.setAttribute('stroke-width', "0");
+
       accordion.classList.remove("tech-visible");
       accordion.classList.add("not-visible");   
     } else {
       svg.setAttribute('fill',"red");
+
+      pulse.setAttribute('stroke-width', "2");
+      pulse.setAttribute('stroke',"red");
+
       accordion.classList.remove("not-visible");
       accordion.classList.add("tech-visible");
       
@@ -38,14 +46,24 @@ class Landing extends Component {
   showServices = () => {
     let accordion = this.refs.services;
     let svg = this.refs.circle2;
+    let pulse = this.refs.pulse2;
     
     if (accordion.classList.contains("services-visible")) {
       svg.removeAttribute('fill',"red");
       svg.setAttribute('fill',"white");
+
+      pulse.removeAttribute('stroke',"red");
+      pulse.setAttribute('stroke',"white");
+      pulse.setAttribute('stroke-width', "0");
+
       accordion.classList.remove("services-visible");
       accordion.classList.add("not-visible");   
     } else {
       svg.setAttribute('fill',"red");
+
+      pulse.setAttribute('stroke-width', "2");
+      pulse.setAttribute('stroke',"red");
+
       accordion.classList.remove("not-visible");
       accordion.classList.add("services-visible");
       
@@ -56,14 +74,24 @@ class Landing extends Component {
   showAbout = () => {
     let accordion = this.refs.about;
     let svg = this.refs.circle3;
+    let pulse = this.refs.pulse3;
     
     if (accordion.classList.contains("about-visible")) {
       svg.removeAttribute('fill',"red");
       svg.setAttribute('fill',"white");
+
+      pulse.removeAttribute('stroke',"red");
+      pulse.setAttribute('stroke',"white");
+      pulse.setAttribute('stroke-width', "0");
+
       accordion.classList.remove("about-visible");
       accordion.classList.add("not-visible");   
     } else {
       svg.setAttribute('fill',"red");
+
+      pulse.setAttribute('stroke-width', "2");
+      pulse.setAttribute('stroke',"red");
+
       accordion.classList.remove("not-visible");
       accordion.classList.add("about-visible");
     
@@ -83,25 +111,33 @@ class Landing extends Component {
           */}
 
             <svg className="svg-circle" width="30" height="30" viewBox="0 0 40 40">
-              <circle cx="20" cy="20" fill="none" r="20" stroke="red" strokeWidth="2">
+              <circle cx="20" cy="20" fill="none" r="20" stroke="white" strokeWidth="0" ref="pulse1">
                 <animate attributeName="r" from="15" to="30" dur="1.5s" begin="0s" repeatCount="indefinite"/>
                 <animate attributeName="opacity" from="1" to="0" dur="1.5s" begin="0s" repeatCount="indefinite"/>
               </circle>
-              <circle cx="20" cy="20" fill="red" r="16" id="circle1" ref="circle1" onClick={this.showTech}/>
+              <circle cx="20" cy="20" fill="white" r="16" id="circle1" ref="circle1" onClick={this.showTech}/>
             </svg>
 
 
           </div>
           <div className="item-container">   
             <p className="item-text">SERVICES</p>
-            <svg className="svg-circle" width="30" height="30">
-              <circle id="circle2" ref="circle2" cx="15" cy="15" r="15" fill="white" onClick={this.showServices}/>
+            <svg className="svg-circle" width="30" height="30" viewBox="0 0 40 40">
+            <circle cx="20" cy="20" fill="none" r="20" stroke="white" strokeWidth="0" ref="pulse2">
+                <animate attributeName="r" from="15" to="30" dur="1.5s" begin="0s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" from="1" to="0" dur="1.5s" begin="0s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="20" cy="20" fill="white" r="16" id="circle2" ref="circle2" onClick={this.showServices}/>
             </svg>
           </div>
           <div className="item-container">  
             <p className="item-text">ABOUT</p>
-            <svg className="svg-circle" width="30" height="30">
-              <circle id="circle3" ref="circle3" cx="15" cy="15" r="15" fill="white" onClick={this.showAbout}/>
+            <svg className="svg-circle" width="30" height="30" viewBox="0 0 40 40">
+              <circle cx="20" cy="20" fill="none" r="20" stroke="white" strokeWidth="0" ref="pulse3">
+                <animate attributeName="r" from="15" to="30" dur="1.5s" begin="0s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" from="1" to="0" dur="1.5s" begin="0s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="20" cy="20" fill="white" r="16" id="circle3" ref="circle3" onClick={this.showAbout}/>
             </svg>
           </div>
         </div>
