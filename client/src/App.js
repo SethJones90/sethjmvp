@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import './App.css';
 import Landing from './components/Landing';
@@ -10,12 +10,10 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div>
+        <div className="app">
           <Route exact path="/" component={ Landing }/>
-          <div className="page">
-            <Route exact path="/why-me" component={WhyMe}></Route>
-            <Route exact path="/get-in-touch" component={GetInTouch}></Route>
-          </div>
+          <Route exact path="/why-me" component={WhyMe}></Route>
+          <Route exact path="/get-in-touch" component={GetInTouch}></Route>
         </div>
       </Router>
     );

@@ -4,7 +4,7 @@ class GetInTouch extends Component {
 
   render() {
     return (
-    <div>
+    <div class="page">
       <h1>GET IN TOUCH</h1>
       <form>
         <input name="name" type="text" className="getInTouchInput"/>
