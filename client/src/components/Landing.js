@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+
+import { Link } from 'react-router-dom';
+
 import rails from '../assets/icons/rails.png';
 import vue from '../assets/icons/vue.png';
 import node from '../assets/icons/node.png';
@@ -6,7 +9,8 @@ import react from '../assets/icons/react.svg';
 import html from '../assets/icons/html5.svg';
 import js from '../assets/icons/javascript.svg';
 import css from '../assets/icons/css3.svg';
-
+import GetInTouch from './GetInTouch';
+import WhyMe from './WhyMe';
 
 class Landing extends Component {
 
@@ -68,7 +72,7 @@ class Landing extends Component {
 
   render() {
     return (
-    <div>
+    <div className="landing">
       <div className="flex-container">
         <div className="skills-container">
           <div className="item-container">
@@ -77,8 +81,6 @@ class Landing extends Component {
               <circle id="circle1" ref="circle1" cx="15" cy="15" r="15" fill="white" onClick={this.showTech}/>
             </svg>
           */}
-
-
 
             <svg className="svg-circle" width="30" height="30" viewBox="0 0 40 40">
               <circle cx="20" cy="20" fill="none" r="20" stroke="red" strokeWidth="2">
@@ -152,9 +154,14 @@ class Landing extends Component {
         </div>
         <div className="tagline-container">
           <div className="container-content">
-            <h1>SETH JONES</h1>
-            <h3>LET'S BUILD <span className="red">YOUR MVP.</span></h3>
-            <button className="hero-button">WHY ME?</button><button className="hero-button">GET IN TOUCH</button>
+            <h1 className="landing-h1">SETH JONES</h1>
+            <h3 className="landing-h3">LET'S BUILD <span className="red">YOUR MVP.</span></h3>
+            <Link to="/why-me">
+              <button className="hero-button">WHY ME?</button>
+            </Link>
+            <Link to="/get-in-touch"> 
+            <button className="hero-button">GET IN TOUCH</button>
+            </Link>
           </div>
         </div>
       </div>
@@ -164,3 +171,5 @@ class Landing extends Component {
 }
 
 export default Landing;
+
+
