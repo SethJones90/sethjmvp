@@ -102,6 +102,19 @@ class Landing extends Component {
     return (
     <div className="landing">
       <div className="flex-container">
+        <div className="tagline-container">
+          <div className="container-content">
+            <h1 className="landing-h1">SETH JONES</h1>
+            <h3 className="landing-h3">LET'S BUILD <span className="red">YOUR MVP.</span></h3>
+            <Link to="/why-me">
+              <button className="hero-button">WHY ME?</button>
+            </Link>
+            <Link to="/get-in-touch"> 
+            <button className="hero-button">GET IN TOUCH</button>
+            </Link>
+          </div>
+        </div>
+
         <div className="skills-container">
           <div className="item-container">
             <p className="item-text">TECH</p>
@@ -142,7 +155,7 @@ class Landing extends Component {
           </div>
         </div>
         
-        <div id="tech" ref="tech" className="not-visible">
+        <div id="tech-popup" ref="tech" className="not-visible">
           <p className="heading">WEAPONS AT YOUR DISPOSAL</p>
           <div className="tech-item">
             <img className="tech-icon" src={rails}/>
@@ -167,7 +180,7 @@ class Landing extends Component {
           </div>
         </div>
         
-        <div id="services" ref="services" className="not-visible">
+        <div id="services-popup" ref="services" className="not-visible">
           <p className="heading">WHAT I CAN DO FOR YOU</p>
           <p className="services-text-1">MVP:</p>
           <p className="services-text-2"></p>
@@ -178,7 +191,7 @@ class Landing extends Component {
           <p className="services-text-2">UI</p>
         </div>
         
-        <div id="about" ref="about" className="not-visible">
+        <div id="about-popup" ref="about" className="not-visible">
           <p className="heading">THE JOURNEY</p>
           <p className="about-text-1">MUSIC</p>
           <p className="about-text-2">=></p>
@@ -187,18 +200,6 @@ class Landing extends Component {
           <p className="about-text-1">DEV</p>
           <p className="about-text-2">=></p>
           <p className="about-text-1">UX</p>
-        </div>
-        <div className="tagline-container">
-          <div className="container-content">
-            <h1 className="landing-h1">SETH JONES</h1>
-            <h3 className="landing-h3">LET'S BUILD <span className="red">YOUR MVP.</span></h3>
-            <Link to="/why-me">
-              <button className="hero-button">WHY ME?</button>
-            </Link>
-            <Link to="/get-in-touch"> 
-            <button className="hero-button">GET IN TOUCH</button>
-            </Link>
-          </div>
         </div>
       </div>
     </div>

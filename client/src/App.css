@@ -9,6 +9,7 @@
   min-height: 100%;
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 html { 
@@ -49,14 +50,10 @@ body {
 
 
 .flex-container {
-  display: flex; /* or inline-flex */
-  /* border: 1px solid white; */
-  flex-direction: row-reverse;
+  display: flex;
+  flex-direction: row;
   height: 100%;
   width: 100%;
-  margin: auto;
-  align-items: center;
-  justify-content: center;
 }
 
 h1.landing-h1 {
@@ -136,14 +133,10 @@ h3.landing-h3 {
 
 
 .skills-container {
-  /* border: 1px solid red; */
-  width:8%;
-  height: 50%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  
 }
 
 .item-container{
@@ -164,7 +157,7 @@ h3.landing-h3 {
   cursor: pointer;
 }
 
-#tech {
+#tech-popup {
   text-align: center;
   z-index: 5;
 }
@@ -259,14 +252,13 @@ h3.landing-h3 {
 }
 
 
-#services {
+#services-popup {
   text-align: center;
   z-index: 5;
 }
 
 
 .services-visible {
-  float: right;
   padding-bottom:15px;
   width: 400px;
   background-color: rgba(0, 0, 0, 0.7);
@@ -303,7 +295,7 @@ h3.landing-h3 {
 
 
 
-#about {
+#about-popup {
   text-align: center;
   z-index: 5;
 }
